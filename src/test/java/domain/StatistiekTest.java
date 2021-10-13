@@ -14,12 +14,10 @@ class StatistiekTest {
         assertThat(Statistiek.getGemiddelde(new BigDecimal[] {BigDecimal.ZERO,
         BigDecimal.TEN})).isEqualByComparingTo("5");
     }
-    //variabele enigGetal aanmaken?
     @Test
     void hetGemiddeldeVanEenGetalIsDatGetal() {
         assertThat(Statistiek.getGemiddelde(new BigDecimal[] {BigDecimal.valueOf(1.23)})).isEqualByComparingTo("1.23");
     }
-    //resultaat is negatief, dus throw een exception
     @Test
     void hetGemiddeldeVanEenLegeVerzamelingKanJeNietBerekenen() {
         assertThatIllegalArgumentException().isThrownBy(() -> Statistiek.getGemiddelde(new BigDecimal[] {}));

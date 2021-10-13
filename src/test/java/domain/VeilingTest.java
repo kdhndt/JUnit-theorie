@@ -14,7 +14,8 @@ class VeilingTest {
 
     @BeforeEach
     public void beforeEach() {
-        var veiling = new Veiling();
+        //we gebruiken hier geen var keyword, veiling bestaat al als membervariable dus is niet nieuw
+        veiling = new Veiling();
     }
 
     @Test
